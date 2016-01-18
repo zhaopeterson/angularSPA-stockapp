@@ -1,0 +1,8 @@
+<ul class="stock-quote">
+	<li class="stock-info-container" ng-repeat = "item in stockQuotes | limitTo: 1">
+		<h2 class="stock-info stock-heading">NASDAQ: {{item.Symbol}}</h2>
+		<h3 class="stock-info last-trading-date">Date: {{item.Date}}</h3>
+		<h4 class="stock-info last-trading-volume">Volume: {{item.Volume}}</h3>
+	</li>
+</ul>
+

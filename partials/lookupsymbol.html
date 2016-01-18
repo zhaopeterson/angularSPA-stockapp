@@ -1,0 +1,15 @@
+<section class="lookupsymbol-page">
+  <form name="tickerlookupform"  novalidate>
+
+  <input class="search" type="text" id="lookup-symbol" placeholder="Type in Company Name Here" ng-model="ticker" ng-required>
+  </form>
+
+  <div class="ticker-list">
+    <a href="#/">Back to Main</a>
+    <ul>
+      <li ng-repeat="item in tickers | filter: ticker">
+        {{item.company}} -- {{item.ticker}}
+      </li>
+    </ul>
+  </div>
+</section>

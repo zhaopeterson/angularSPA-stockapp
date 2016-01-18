@@ -1,0 +1,43 @@
+<section class="stockquote-page">
+  <div class="portfolio">
+  <h2 class="portfolio-title">My Portfolio <i class="fa fa-camera-retro"></i></h2>
+  <ul class="portfolio">
+  <li ng-repeat = "item in portfolios | limitTo: -5" >
+    <portfolio-quote item="item"></portfolio-quote>
+  </li>
+</ul>
+ 
+  </div>
+
+  <form name="stockform" class="stock-form" ng-submit = "search()" novalidate>
+
+  <p class="stock-symbol-lookup"><a href="#/lookupSymbol">Need to look up stock symbol? <i class="fa fa-long-arrow-right"></i></a></p>
+    <p class="error validationerror" ng-show="keyMsgShow" ng-model="keyMsg">{{keyMsg}}</p>
+  <input class="search" name="search" ticker-keys type="text" id="stock-symbol" placeholder="Stock Symbol" ng-model="symbol" ng-required="true">
+  <button class="btn" type="submit" ng-disabled="stockform.$invalid">Search</button>
+
+  </form>
+
+<form class="dates-form" name="dateForm"> 
+    <label>from <input type="date" required name="fromDate" id="start-date" class="date-range"></label>
+    <label>to <input type="date" required name="endDate" id="end-date" class="date-range"></label>
+</form>
+  <h3 class="stock-noresults" ng-show="!stockResutls">{{errorMsg}}</h3>
+<div class="chart-container">
+
+  <div id="time-range-container" class="time-range-container" ng-show="stockResults">
+    <button class = "add-to-portfolio" id="add-to-portfolio" ng-show="chartExist">Add to My Portfolio</button>
+    <p class="portfolio-exist" ng-show="portfolioExist" >Already in portfolio</p>
+    <ul class="period" id="timeRange">
+      <li id="fiveday" data-days="5">5 day</li>
+      <li id="onemonth" class="period-active" data-days="30">1 month</li>
+      <li id="threemonth" data-days="90">3 month</li>
+      <li id="oneyear" data-days="365">1 year</li>
+      <li id="fiveyears" data-days="1825">5 years</li>
+    </ul>
+
+  </div><!--  end of time-range container  -->
+<div id="chart"></div>
+<stock-quote></stock-quote>
+</div>
+</section>

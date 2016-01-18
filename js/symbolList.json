@@ -1,0 +1,33 @@
+{
+	"stock_tickers": [
+		{
+			"company": "Yahoo! Inc.",
+			"ticker" : "YHOO" },
+			{
+			"company": "Google",
+			"ticker" : "GOOG" },
+			{
+			"company": "Microsoft",
+			"ticker" : "MSFT" },
+			{
+			"company": "VMWare",
+			"ticker" : "VMW" },
+			{
+			"company": "Wal-Mart Stores, Inc",
+			"ticker" : "WMT" },
+			{
+			"company": "Facebook",
+			"ticker" : "FB" },
+			{
+			"company": "IBM Inc",
+			"ticker" : "IMB" },
+			{
+			"company": "Twitter",
+			"ticker" : "TWTR" },
+			{
+			"company": "Cisco Systems, Inc.",
+			"ticker" : "CSCO" }
+
+	]
+}
+

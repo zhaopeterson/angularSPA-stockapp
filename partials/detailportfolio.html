@@ -1,0 +1,10 @@
+<section class="detail-info-page" ng-model="item">
+	<div class="detail-portfolio">
+		<a href="#/"><i class="fa fa-arrow-circle-o-left"></i> Go back to Main</a>
+		<p>Ideally this will be the place to watch daily value, can not find a live day trade API</p>
+		<h1>{{detailPortfolios[whichPortfolio].symbol}} <span class="detail-change">{{detailPortfolios[whichPortfolio].Change_PercentChange}}</span></h1>
+		<ul>
+			<li ng-repeat="(key, value) in detailPortfolios[whichPortfolio]">{{key}} : {{value}}</li>
+		</ul>
+	</div>
+</section>
