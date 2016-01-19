@@ -5,7 +5,7 @@
 		<i class="fa fa-arrow-up" ng-class="item.change.indexOf('-') !== -1 ? 'downarrow' : 'uparrow'"></i>
 		({{item.ChangeinPercent}})</span>
 	</h2>
-	<h3>{{item.DaysHigh}}</h3>
-	<h4>{{item.DaysLow}}</h4>
+	<h3>{{item.DaysHigh | number:2}}</h3>
+	<h4>{{item.DaysLow | number:2}}</h4>
 </a>
 

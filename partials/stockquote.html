@@ -2,7 +2,7 @@
   <div class="portfolio">
   <h2 class="portfolio-title">My Portfolio <i class="fa fa-camera-retro"></i></h2>
   <ul class="portfolio">
-  <li ng-repeat = "item in portfolios | limitTo: -5" >
+  <li ng-animate="'animate'" ng-repeat = "item in portfolios | limitTo: -5" >
     <portfolio-quote item="item"></portfolio-quote>
   </li>
 </ul>
