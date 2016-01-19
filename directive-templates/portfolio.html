@@ -1,8 +1,8 @@
 <a href="#/detailPortfolio/{{portfolios.indexOf(item)}}">
 	<h2 class="portfolio-symbol">{{item.symbol}} 
-	<span ng-class="item.change.indexOf('-') !== -1 ? 'stockdown' : 'stockup'">
-		<i class="fa fa-arrow-down" ng-class="item.change.indexOf('-') !== -1 ? 'downarrow' : 'uparrow'"></i>
-		<i class="fa fa-arrow-up" ng-class="item.change.indexOf('-') !== -1 ? 'downarrow' : 'uparrow'"></i>
+	<span ng-class="item.ChangeinPercent.indexOf('+') == -1 ? 'stockdown' : 'stockup'">
+		<i class="fa fa-arrow-down" ng-class="item.ChangeinPercent.indexOf('+') == -1 ? 'downarrow' : 'uparrow'"></i>
+		<i class="fa fa-arrow-up" ng-class="item.ChangeinPercent.indexOf('-') !== -1 ? 'downarrow' : 'uparrow'"></i>
 		({{item.ChangeinPercent}})</span>
 	</h2>
 	<h3>{{item.DaysHigh | number:2}}</h3>
