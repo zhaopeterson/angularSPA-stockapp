@@ -22,14 +22,12 @@ stockApp.directive('tickerKeys', function() {
             
             element.on('keydown', function(event) {
                 if ((isAlphaKeyCode(event.keyCode) || isNavigationKeycode(event.keyCode))){
-                    $scope.keyMsgShow = false;                             
+                    $scope.keyMsg = "Only Letters Please"; 
+                    $scope.keyMsgShow = true;                             
                     return true;
                 } else {
-                    $scope.keyMsgShow = true;
-                    $scope.keyMsg = "Only Letters Please"; 
-
-
-                    console.log("$scope.keyMsgShow", $scope.keyMsgShow, $scope.keyMsg,event.keyCode);
+                    $scope.keyMsgShow = false;
+                    
                     event.preventDefault();
                     
                 }

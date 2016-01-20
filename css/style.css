@@ -132,6 +132,7 @@ h2.portfolio-title {
   font-size: 1.2rem;
   border-bottom: 1px solid #516c8b;
   margin-bottom: 10px;
+  white-space: nowrap;
 }
 
 .portfolio {
@@ -209,7 +210,7 @@ h2 span.stockup {
 
 /* Overide some ng validation rules */
 input.ng-invalid.ng-pristine{
-  border: solid 1px #DA3637;
+  border: solid 1px #516c8b;
 }
 
 /* Search Styles */
@@ -244,7 +245,7 @@ input.ng-invalid.ng-pristine{
 
 .btn {
     display: inline-block;
-    min-width:160px;
+    min-width: 160px;
     height: 50px;
     margin-bottom: 0;
     padding: 0 15px;
@@ -298,13 +299,20 @@ input.ng-invalid.ng-pristine{
   border: 1px solid rgba(255,255,255,0.2);
   outline: 0;
   border: 1px solid rgba(0,0,0,0.3);
-  display: inline;
+  display: inline-block;
   width: auto;
+  float: left;
+}
+
+.label-wrapper {
+  display: inline-block;
+  min-width: 300px;
 }
 
 .dates-form label {
-  display: inline;
-  width: auto;
+  text-align: center;
+  width: 40px;
+  float: left;
   color: #ce223b;
 }
 
@@ -421,7 +429,7 @@ input.ng-invalid.ng-pristine{
 }
 
 .error.validationerror {
-  color: #c50b2e;
+  color: #93c041;
   font-size: 0.7rem;
   height: 15px;
   position: absolute;
@@ -433,7 +441,9 @@ input.ng-invalid.ng-pristine{
   .stockquote-page {
 
   }
-
+.dates-form label {
+  width: 40px;
+}
 .portfolio li {
   display: block;
   width: 100%;
@@ -442,6 +452,21 @@ input.ng-invalid.ng-pristine{
 }
 .portfolio h2, .portfolio h3, .portfolio h4{
   display: inline-block;
-  width: 160px;
+  width: 30%;
 }
+
+.btn {
+  margin-top: 10px;
+}
+
+.period {
+    width: 100%;
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 40px;
+    font-size: 0.6rem;
+
+}
+.period li {
+  margin-right:10px;
 }

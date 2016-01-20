@@ -19,8 +19,8 @@
   </form>
 
 <form class="dates-form" name="dateForm"> 
-    <label>from <input type="date" required name="fromDate" id="start-date" class="date-range"></label>
-    <label>to <input type="date" required name="endDate" id="end-date" class="date-range"></label>
+   <p class="label-wrapper"> <label>from </label><input type="date" required name="fromDate" id="start-date" class="date-range"></p>
+   <p class="label-wrapper"> <label>to </label><input type="date" required name="endDate" id="end-date" class="date-range"></p>
 </form>
   <h3 class="stock-noresults" ng-show="!stockResutls">{{errorMsg}}</h3>
 <div class="chart-container">
