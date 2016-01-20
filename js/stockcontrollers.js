@@ -19,8 +19,6 @@ stockControllers.controller('stockSearchController', ['$scope', '$http', functio
 	// Default is to set a 30 day period
 	resetDefaultDate();
 
-
-
 	document.dateForm.fromDate.value = formatDate(fromDate, "-");
 	document.dateForm.endDate.value = formatDate(endDate, "-");
 
@@ -36,6 +34,8 @@ stockControllers.controller('stockSearchController', ['$scope', '$http', functio
 	function generatePortfolios(query) {
 		$http.get(query).success(function(data){
 			$scope.portfolios = data.query.results.quote;
+			console.log($scope.portfolios)
+
 		}) //end of format date
 	}
 
@@ -163,7 +163,7 @@ stockControllers.controller('stockSearchController', ['$scope', '$http', functio
 		endDate = endDate.toUTCString();
 
 		stockName = $scope.stockName;
-		if(document.querySelector(".period-active")) {
+		if (document.querySelector(".period-active")) {
 			document.querySelector(".period-active").className = "";
 		}
 

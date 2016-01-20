@@ -3,7 +3,7 @@
 	<span ng-class="item.ChangeinPercent.indexOf('+') == -1 ? 'stockdown' : 'stockup'">
 		<i class="fa fa-arrow-down" ng-class="item.ChangeinPercent.indexOf('+') == -1 ? 'downarrow' : 'uparrow'"></i>
 		<i class="fa fa-arrow-up" ng-class="item.ChangeinPercent.indexOf('-') !== -1 ? 'downarrow' : 'uparrow'"></i>
-		({{item.ChangeinPercent}})</span>
+		({{item.ChangeinPercent | toDecimal2 }})</span>
 	</h2>
 	<h3>{{item.DaysHigh | number:2}}</h3>
 	<h4>{{item.DaysLow | number:2}}</h4>
